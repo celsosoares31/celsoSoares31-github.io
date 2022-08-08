@@ -13,6 +13,12 @@ nav{
     position: fixed;
     z-index: 1;
 }
+#menuIcon{
+    display: none;
+}
+nav label{
+    display: none;
+}
 ul li{
     display:inline-block; 
     font-size: 1.0rem;
@@ -72,8 +78,6 @@ a{
 .img-prof{
     height: inherit;
     width: 50vw;
-    justify-content: center;
-    align-items: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,12 +85,11 @@ a{
 }
 .img-prof-1{
     background-image: url("../imgs/profile_picture.png");
-    background-attachment: fixed;
-    width: 450px;
-    height: 450px;
-    border-radius: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50vw;
+    height: 500px;
 }
-
 .social-media{
     display: flex;
     flex-flow: column;
@@ -133,4 +136,80 @@ footer{
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 450px){
+    nav{
+        background-color: rgb(11, 10, 11,0.45);
+        z-index: 1;
+        display: none;
+        width: 60vw;
+        height: 25vh;
+        padding: 5px;
+        right: 2px;
+        top: 12vh;
+    }
+    nav, .main, footer, .container, p, span{
+        font-size: 1rem;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li:before{
+        background-color: #015761;
+    }
+    nav ul li:first-child{
+        display: none;
+    }
+    label{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        display: block;
+        z-index: 2;
+    }
+    label img{
+        width: 75px;
+        height: 75px;
+    }
+   
+    .container{
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+    }
+    .main{
+        margin-top: 0px;
+        width: 100vw;
+        height: 210px;
+    }
+    .text-intro{
+        width: inherit;
+        height: inherit;
+        padding: 25px;
+    }
+    .text-intro p span{
+        font-size: 1.2rem;
+    }
+    .menu{
+        background-color: #015761;
+        width: 100vw;
+        height: 11vh;
+    }
+    .img-prof{
+        width: auto;
+    }
+    .img-prof-1{
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        background-size: 70px 70px;
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+    }
+    .social-media{
+        
+    }
 }
